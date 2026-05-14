@@ -145,32 +145,6 @@ import {
     },
   ];
   
-  const testimonials = [
-    {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-  ];
   
   const projects = [
     {
@@ -193,7 +167,7 @@ import {
       ],
       image: film_social,
       source_code_link: "https://github.com/GraceVargas/Social-Network",
-      deploy_link: "https://gracevargas.github.io/Social-Network/",
+      deploy_link: "https://gracevargas.com.ar/Conectadas/",
     },
     {
       name: "Job IT",
@@ -215,7 +189,7 @@ import {
       ],
       image: job_finder,
       source_code_link: "https://github.com/GraceVargas/Job-finder",
-      deploy_link: "https://gracevargas.github.io/Job-finder/",
+      deploy_link: "https://gracevargas.com.ar/Job-finder/",
     },
     {
       name: "Ahorradas",
@@ -237,7 +211,7 @@ import {
       ],
       image: ahorradas,
       source_code_link: "https://github.com/GraceVargas/Ahorradas",
-      deploy_link: "https://gracevargas.github.io/Ahorradas/",
+      deploy_link: "https://gracevargas.com.ar/Ahorradas/",
     },
     {
       name: "Password generator",
@@ -259,7 +233,7 @@ import {
       ],
       image: generador_claves,
       source_code_link: "https://github.com/GraceVargas/Generador-de-claves",
-      deploy_link: "https://gracevargas.github.io/Generador-de-claves/",
+      deploy_link: "https://gracevargas.com.ar/Generador-de-claves/",
     },
     {
       name: "Fixo Electrónica Service",
@@ -276,9 +250,8 @@ import {
         },
       ],
       image: fixo,
-      source_code_link: "https://github.com/GraceVargas/fixo.pc",
-      deploy_link: "https://gracevargas.github.io/fixo.pc/",
+      deploy_link: "https://fixocomputacion.com.ar/",
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, projects };

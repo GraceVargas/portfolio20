@@ -17,6 +17,7 @@ import LocaleContext from "./context/LocaleContext";
 const App = () => {
   const [locale, setLocale] = useState("en");
 
+  // eslint-disable-next-line no-unused-vars
   i18n.on("languageChanged", (lng) => setLocale(i18n.language));
 
   return (
