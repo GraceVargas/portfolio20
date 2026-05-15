@@ -7,6 +7,7 @@ import Experience from './Experience';
 import Works from './Works';
 import Contact from './Contact';
 import SwitchButton from './SwitchLanguageButton';
+import { Modal } from './Modal';
 
 export {
   Hero,
@@ -20,5 +21,6 @@ export {
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas,
-  SwitchButton
+  SwitchButton,
+  Modal
 }

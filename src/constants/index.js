@@ -167,7 +167,7 @@ import {
       ],
       image: film_social,
       source_code_link: "https://github.com/GraceVargas/Social-Network",
-      deploy_link: "https://gracevargas.com.ar/Conectadas/",
+      deploy_link: "https://gracevargas.github.io/Social-Network/",
     },
     {
       name: "Job IT",
@@ -189,7 +189,7 @@ import {
       ],
       image: job_finder,
       source_code_link: "https://github.com/GraceVargas/Job-finder",
-      deploy_link: "https://gracevargas.com.ar/Job-finder/",
+      deploy_link: "https://gracevargas.github.io/Job-finder/",
     },
     {
       name: "Ahorradas",
@@ -211,7 +211,7 @@ import {
       ],
       image: ahorradas,
       source_code_link: "https://github.com/GraceVargas/Ahorradas",
-      deploy_link: "https://gracevargas.com.ar/Ahorradas/",
+      deploy_link: "https://gracevargas.github.io/Ahorradas/",
     },
     {
       name: "Password generator",
@@ -233,7 +233,7 @@ import {
       ],
       image: generador_claves,
       source_code_link: "https://github.com/GraceVargas/Generador-de-claves",
-      deploy_link: "https://gracevargas.com.ar/Generador-de-claves/",
+      deploy_link: "https://gracevargas.github.io/Generador-de-claves/",
     },
     {
       name: "Fixo Electrónica Service",

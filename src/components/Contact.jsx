@@ -1,11 +1,11 @@
 import { useState, useRef} from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { useTranslation } from 'react-i18next';
+import { Modal } from './Modal';
 
 
 const Contact = () => {
@@ -18,6 +18,9 @@ const Contact = () => {
     message: ''
   })
   const [loading, setLoading] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
+  const [modalType, setModalType] = useState('success');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,32 +31,34 @@ const Contact = () => {
     e.preventDefault(); 
     setLoading();
 
-    emailjs.send( 
-      'service_c1ohr9d',
-      'template_hmg6byd',
-      {
-        from_name: form.name,
-        to_name: 'Graciela',
-        from_email: form.email,
-        to_email: 'gracielavargasg@gmail.com',
+    fetch('https://contact-form.gracielavargasg.workers.dev', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
         message: form.message
-      },
-      'UbwIJ89IzeI9igr9s'
-    )
-    .then(()=> {
-      setLoading(false);
-      alert('Thank you! I will get back to you as soon as possible.');
-      setForm({
-        name: '',
-        email: '',
-        message: ''
       })
-    }, (error) => {
-      setLoading(false);
-      console.log(error);
-      alert('Something went wrong.');
     })
-  }
+    .then(res => res.json())
+  .then(data => {
+    setLoading(false);
+    if (data.success) {
+      setModalMessage('Thank you! I will get back to you as soon as possible.');
+      setModalType('success');
+      setModalOpen(true);
+      setForm({ name: '', email: '', message: '' });
+    } else {
+      throw new Error();
+    }
+  })
+  .catch(() => {
+    setLoading(false);
+    setModalMessage('Something went wrong.');
+    setModalType('error');
+    setModalOpen(true);
+  });
+}
 
 
   return (
@@ -115,6 +120,14 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+
+      <Modal 
+        isOpen={modalOpen}
+        title={modalType === 'success' ? 'Success!' : 'Error'}
+        message={modalMessage}
+        onClose={() => setModalOpen(false)}
+        type={modalType}
+      />
     </div>
   )
 }
