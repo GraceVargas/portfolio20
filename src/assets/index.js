@@ -24,8 +24,8 @@ import alot from "./company/alot.png";
 import mater_dei from "./company/mater_dei.png";
 
 import film_social from "./film_social.png";
-import job_finder from "./job_finder.png";
-import ahorradas from "./ahorradas.png";
+import dimec from "./dimec.png";
+import notes from "./notes.png";
 import generador_claves from "./generador_claves.png";
 import fixo from "./fixo.png";
 
@@ -55,8 +55,8 @@ export {
   alot,
   mater_dei,
   film_social,
-  job_finder,
-  ahorradas,
+  dimec,
+  notes,
   generador_claves,
   fixo
 };

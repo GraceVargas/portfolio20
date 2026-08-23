@@ -3,24 +3,11 @@ import {
     backend,
     creator,
     web,
-    javascript,
-    typescript,
-    html,
-    css,
-    reactjs,
-    bootstrap,
-    tailwind,
-    asp,
-    sass,
-    git,
     alot,
     mater_dei,
-    job_finder,
-    ahorradas,
-    generador_claves,
+    dimec,
+    notes,
     fixo,
-    nextjs,
-    film_social,
   } from "../assets";
   
   export const navLinks = [
@@ -56,51 +43,43 @@ import {
       icon: creator,
     },
   ];
-  
-  const technologies = [
+
+  const skillCategories = [
     {
-      name: "HTML 5",
-      icon: html,
+      title: "Frontend",
+      skills: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "Material UI",
+      ],
     },
     {
-      name: "CSS 3",
-      icon: css,
+      title: "Systems",
+      skills: [
+        "APIs REST",
+        "Manejo de estado",
+        "Autenticación",
+        "Validación de formularios",
+        "Diseño responsive",
+        "Integraciones de terceros",
+      ],
     },
     {
-      name: "JavaScript",
-      icon: javascript,
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
-      name: "Next JS",
-      icon: nextjs,
-    },
-    {
-      name: "Bootstrap",
-      icon: bootstrap,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Classic ASP",
-      icon: asp,
-    },
-    {
-      name: "Sass",
-      icon: sass,
-    },
-    {
-      name: "Git",
-      icon: git,
+      title: "Stack & Delivery",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "SQL",
+        "AWS",
+        "Cloudflare",
+        "Vercel",
+        "GitHub",
+      ],
     },
   ];
   
@@ -117,6 +96,7 @@ import {
         "Exp_1_point_3",
         "Exp_1_point_4",
         "Exp_1_point_5",
+        "Exp_1_point_6"
       ],
     },
     {
@@ -127,9 +107,7 @@ import {
       date: "Exp_2_date",
       points: [
           "Exp_2_point_1",
-          "Exp_2_point_2",
-          "Exp_2_point_3",
-          "Exp_2_point_4",
+          "Exp_2_point_2"
       ],
     },
     {
@@ -139,8 +117,7 @@ import {
       iconBg: "#383E56",
       date: "Exp_3_date",
       points: [
-        "Exp_3_point_1",
-        "Exp_3_point_2",
+        "Exp_3_point_1" 
       ],
     },
   ];
@@ -148,12 +125,12 @@ import {
   
   const projects = [
     {
-      name: "Conectadas",
+      name: "Droguería DIMEC",
       description:
         "Project_1_desc",
       tags: [
         {
-          name: "react",
+          name: "next js",
           color: "blue-text-gradient",
         },
         {
@@ -161,97 +138,59 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "AWS Amplify",
           color: "pink-text-gradient",
         },
       ],
-      image: film_social,
-      source_code_link: "https://github.com/GraceVargas/Social-Network",
-      deploy_link: "https://gracevargas.github.io/Social-Network/",
+      image: dimec,
+      deploy_link: "https://www.drogueriadimec.com.ar/",
     },
     {
-      name: "Job IT",
+      name: "The Note App",
       description:
         "Project_2_desc",
       tags: [
-        {
-          name: "javascript",
+          {
+          name: "nest js",
           color: "blue-text-gradient",
         },
         {
-          name: "typescript",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
+          name: "postgreSQL",
           color: "pink-text-gradient",
         },
+        {
+          name: "next js",
+          color: "red-text-gradient",
+        },
+        {
+          name: "react",
+          color: "green-text-gradient",
+        }
       ],
-      image: job_finder,
-      source_code_link: "https://github.com/GraceVargas/Job-finder",
-      deploy_link: "https://gracevargas.github.io/Job-finder/",
+      image: notes,
+      source_code_link: "https://github.com/GraceVargas/Notes-app"
     },
     {
-      name: "Ahorradas",
+      name: "Fixo Electrónica",
       description:
         "Project_3_desc",
       tags: [
         {
-          name: "typescript",
+          name: "next js",
           color: "blue-text-gradient",
         },
-        {
-          name: "bootstrap",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: ahorradas,
-      source_code_link: "https://github.com/GraceVargas/Ahorradas",
-      deploy_link: "https://gracevargas.github.io/Ahorradas/",
-    },
-    {
-      name: "Password generator",
-      description:
-        "Project_4_desc",
-      tags: [
         {
           name: "typescript",
-          color: "blue-text-gradient",
+          color: "pink-text-gradient",
         },
         {
-          name: "bootstrap",
+          name: "cloudflare",
           color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: generador_claves,
-      source_code_link: "https://github.com/GraceVargas/Generador-de-claves",
-      deploy_link: "https://gracevargas.github.io/Generador-de-claves/",
-    },
-    {
-      name: "Fixo Electrónica Service",
-      description:
-        "Project_5_desc",
-      tags: [
-        {
-          name: "html",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
+        }
       ],
       image: fixo,
       deploy_link: "https://fixocomputacion.com.ar/",
     },
   ];
   
-  export { services, technologies, experiences, projects };
+  export { services, experiences, projects, skillCategories };

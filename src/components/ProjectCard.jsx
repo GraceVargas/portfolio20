@@ -17,14 +17,14 @@ export const ProjectCard = ({
   const { t } = useTranslation();
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="h-full">
       <Tilt
         options={{
           max: 35,
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-[500px] flex flex-col"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -44,31 +44,31 @@ export const ProjectCard = ({
                 className="w-1/2 h-1/2 object-contain"
               />
             </div>)}
-            <div
-              onClick={() => window.open(deploy_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={deploy}
+            {deploy_link && (
+              <div
+                onClick={() => window.open(deploy_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={deploy}
                 alt="github"
                 className="w-1/2 h-1/2 object-contain invert"
               />
-            </div>
+            </div>)}
           </div>
         </div>
-        {/* agregar un circulo para ver la pagina deployada */}
 
-        <div className="mt-5">
+        <div className="mt-5 flex flex-1 flex-col">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{t(description)}</p>
-        </div>
+          <p className="mt-2 text-secondary text-[14px] flex-1">{t(description)}</p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+                #{tag.name}
+              </p>
+            ))}
+          </div>
         </div>
       </Tilt>
     </motion.div>
